@@ -37,7 +37,7 @@ export const connect = (mapStateToProps, mapDispatchToProps) => {
 
     // what is this? Hint, you should fix something here
     ConnectedComponent.contextTypes = {
-      whatIsThisKeySupposedToBeCalled: React.PropTypes.object
+      store: React.PropTypes.object
     }
 
     return ConnectedComponent

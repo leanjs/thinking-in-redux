@@ -7,7 +7,7 @@ describe("The beers reducer in src/reducers/beers.js", () => {
 
     expect(state).to.be.deep.equal([5])
   })
-
+  
   it("should set the default state in the parameter called state", () => {
     const state = beersReducer(undefined, {type: 'test'})
 
