@@ -8,6 +8,7 @@
     "test": "cross-env NODE_ENV=test ./node_modules/.bin/mocha ./src/actions/*.spec.js* ./src/reducers/*.spec.js* ./src/redux/*.spec.js* ./src/react-redux/*.spec.js* ./src/components/*.spec.js* --compilers js:babel-register --require ./setup-jsdom.js -w"
   },
   "author": "LeanJS",
+  "homepage": "https://github.com/leanjscom/thinking-in-redux#readme",
   "license": "GPL-3.0",
   "dependencies": {
     "react": "^15.4.1",
