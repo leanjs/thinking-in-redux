@@ -1,9 +1,13 @@
-import { ADD_BEER_TO_CART } from '../actions'
+import { BUY_BEER, DELETE_BEER_FROM_CART } from '../actions'
 
 const cart = (state = [], action) => {
   switch (action.type) {
-    case ADD_BEER_TO_CART:
+    case BUY_BEER:
       return [...state, action.beer]
+
+    case DELETE_BEER_FROM_CART:
+      return state.filter( beer => ( beer.id !== action.beer.id ))
+
     default:
       return state
   }

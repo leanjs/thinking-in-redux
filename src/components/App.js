@@ -1,5 +1,6 @@
 import React from "react"
 import SideMenu from 'react-burger-menu'
+import { connect } from 'react-redux'
 
 import BeerList from "./beers/List"
 import Basket from "./cart/Basket"
@@ -7,16 +8,15 @@ import Checkout from "./cart/Checkout"
 import Header from "./Header"
 import theme from "./theme"
 
+import * as actions from '../actions'
+
 class App extends React.Component {
   constructor() {
     super()
-    this.state = {
-      isSideMenuOpen: false
-    }
   }
 
   toggleSideMenu = () => {
-    this.setState({ isSideMenuOpen: !this.state.isSideMenuOpen })
+    this.props.dispatch(actions.toggleSideMenu())
   }
 
   render() {
@@ -26,7 +26,7 @@ class App extends React.Component {
           noOverlay
           customCrossIcon={false}
           customBurgerIcon={ false }
-          isOpen={this.state.isSideMenuOpen}
+          isOpen={this.props.isOpen}
           pageWrapId={'page-wrap'}
           styles={theme.sideMenu}
         >
@@ -46,4 +46,15 @@ class App extends React.Component {
   }
 }
 
-export default App
+const mapStateToProps = state => ({
+  isOpen: state.menu.isOpen
+})
+
+const mapDispatchToProps = dispatch => ({
+  dispatch
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App)
