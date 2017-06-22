@@ -5,9 +5,9 @@ This is an exercise based on unit tests to help you learn Redux. This exercise i
 
 ## How to install
 
-- `git clone git@github.com:leanjscom/thinking-in-redux.git`
-- `cd react-redux-koans`
-- `npm i`
+- `git clone https://github.com/leanjscom/thinking-in-redux.git`
+- `cd thinking-in-redux`
+- `yarn install`
 - Don't do `npm start` because you need to fix the app before
 
 ## First part of the exercise, fix the app.
